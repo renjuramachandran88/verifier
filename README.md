@@ -8,9 +8,9 @@ SDK requires minimum Android version 5.0 and turn on JAVA 8 compatability on gra
 
 ### Installing
 
-clone the repo and generate aar file by building the project in Android Studio
+Clone the repo and generate aar file by building the project in Android Studio
 
-Add the aar file to you app's libs folder and add aar reference in the project build.gradle file
+Add the aar file to your app's libs folder and add aar reference in the project build.gradle file
 
 ```
 allprojects {
@@ -24,9 +24,11 @@ allprojects {
 }
 ```
 
-and add following dependancies on app gradle file
+and add following dependencies on app gradle file
 
 ```
+ implementation(name:'verifier', ext:'aar')
+
  implementation 'com.google.android.gms:play-services-base:17.6.0'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
     implementation 'com.google.apis:google-api-services-vision:v1-rev16-1.22.0'
@@ -51,4 +53,4 @@ and add following user permissions in android manifest file
         android:required="true" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
     
-    ```
+    
